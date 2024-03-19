@@ -37,5 +37,5 @@ while count <= 31:
 
 promedio = sum(temperaturas) / len(temperaturas)
 print("Temperatura promedio del mes:", promedio)
-print("Temperatura minima del mes:" ,min(temperaturas))
-print("Temperatura maxima del mes:" ,max(temperaturas))
+print("Temperatura minima del mes:", min(temperaturas))
+print("Temperatura maxima del mes:", max(temperaturas))
