@@ -47,11 +47,12 @@ Pendientes:
 # PROCESOS
 #
 
-precio = 1
-while precio != 0:
-    precio = int(input("Ingrese el precio del producto: "))
-    print('En efectivo:', round(precio * 0.9, 2))
-    print('Tarjeta 1 pago:', precio)
-    print('Tarjeta 3 pagos:', round(precio * 1.05, 2))
-    print('Tarjeta 6 pagos:', round(precio * 1.1, 2))
-    print('Tarjeta 12 pagos:', round(precio * 1.15, 2))
+while True:
+    precioDeLista = float(input("Ingrese el precio de lista del producto: "))
+    if precioDeLista == 0:
+        break
+    print('En efectivo: ', precioDeLista * 0.9)
+    print('Tarjeta 1 pago: ', precioDeLista)
+    print('Tarjeta 3 pagos: ', precioDeLista * 1.05)
+    print('Tarjeta 6 pagos: ', precioDeLista * 1.10)
+    print('Tarjeta 12 pagos: ', precioDeLista * 1.15)
