@@ -30,7 +30,7 @@ Pendientes:
 
 count = 1
 temperaturas = []
-while count < 32:
+while count <= 31:
     temperatura = float(input(f"Ingrese la temperatura del día {count}: "))
     temperaturas.append(temperatura)
     count = count + 1
