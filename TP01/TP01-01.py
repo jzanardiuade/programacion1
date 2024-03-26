@@ -46,7 +46,7 @@ def esMayorEstricto(num1, num2, num3):
     if mayor == num3:
         if tieneUnIgual(mayor, num1, num2):
             return -1
-
+    return mayor
 
 #----------------------------------------------------------------------------------------------
 # CUERPO PRINCIPAL
