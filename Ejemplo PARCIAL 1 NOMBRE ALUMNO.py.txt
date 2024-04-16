@@ -1,0 +1,111 @@
+"""
+-----------------------------------------------------------------------------------------------
+Título: 
+Fecha: 
+Autor: Nombre alumno (matrícula)
+
+Descripción:
+
+Pendientes:
+-----------------------------------------------------------------------------------------------
+"""
+
+#----------------------------------------------------------------------------------------------
+# MÓDULOS
+#----------------------------------------------------------------------------------------------
+...
+
+
+#----------------------------------------------------------------------------------------------
+# FUNCIONES
+#----------------------------------------------------------------------------------------------
+def generarLanzamientos():
+    """
+    Devuelve una lista de números aleatorios simulando lanzamientos del juego de ruleta.
+    """
+    ...
+        
+    return ...
+
+
+def informarVecesGanaBanca():
+    """
+    A partir de la lista de valores de lanzamientos recibida,
+    devuelve la cantidad de veces que salió el O (cero).
+    """
+    ...
+    
+    return ...
+
+
+def informarCuandoGanaBanca():
+    """
+    A partir de la lista de valores de lanzamientos recibida,
+    devuelve en qué números de lanzamiento salió el 0 (cero).
+    """
+    ...
+    
+    return ...
+
+
+def informarOtrasEstadisticas():
+    """
+    A partir de la lista de valores de lanzamientos recibida,
+    devuelve 3 estadísticas, sobre valores pares, impares y promedio.
+    """
+    ...
+    
+    return ..., ..., ..., ..., ...
+
+
+#----------------------------------------------------------------------------------------------
+# CUERPO PRINCIPAL
+#----------------------------------------------------------------------------------------------
+#-------------------------------------------------
+# Inicialización de variables
+#----------------------------------------------------------------------------------------------
+lanzamientos = [] # Esta lista se utiliza en el programa principal para almacenar los números generados del juego de ruleta
+
+
+#-------------------------------------------------
+# Bloque de menú
+#----------------------------------------------------------------------------------------------
+while True:
+    while True:
+        print()
+        print("---------------------------")
+        print("MENÚ DEL SISTEMA           ")
+        print("---------------------------")
+        print("[1] Generar lanzamientos simulados de ruleta")
+        print("[2] Informar veces que gana la banca")
+        print("[3] Informar en qué lanzamientos gana la banca")
+        print("[4] Mostrar otras estadísticas")
+        print("---------------------------")
+        print("[0] Salir del programa")
+        print()
+        opcion = input("Seleccione una opción: ")
+        if opcion in ("0","1","2","3","4"): # Sólo continua si se elije una opcion de menú válida
+            break
+        else:
+            input("Opción inválida. Presione ENTER para volver a seleccionar.")
+    print()
+
+    if opcion == "0": # Opción salir del programa
+        exit() # También puede ser sys.exit() para lo cual hay que importar el módulo sys
+
+    elif opcion == "1":   # Opción 1
+        ...
+        
+    elif opcion == "2":   # Opción 2
+        ...
+        
+    elif opcion == "3":   # Opción 3
+        ...
+        
+    elif opcion == "4":   # Opción 4
+        ...
+
+    print()
+    input("\nPresione ENTER para volver al menú.")
+    print("\n\n")
+
