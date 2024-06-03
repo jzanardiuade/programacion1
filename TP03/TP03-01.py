@@ -66,6 +66,30 @@ def generarMatriz(n):
     matriz = [[random.randint(0, 99) for i in range(n)] for j in range(n)]
     return matriz
 
+def ordenarMatriz(matriz):
+    for i in range(len(matriz)):
+        matriz[i].sort()
+    return matriz
+
+def intercambiarFilas(matriz, f1, f2):
+    matriz[f1], matriz[f2] = matriz[f2], matriz[f1]
+    return matriz
+
+def intercambiarColumnas(matriz, c1, c2):
+    for i in range(len(matriz)):
+        matriz[i][c1], matriz[i][c2] = matriz[i][c2], matriz[i][c1]
+    return matriz
+
+def transponerMatriz(matriz):
+    for i in range(len(matriz)):
+        for j in range(i, len(matriz)):
+            matriz[i][j], matriz[j][i] = matriz[j][i], matriz[i][j]
+    return matriz
+
+def promedioFila(matriz, f):
+    return sum(matriz[f]) / len(matriz[f])
+
+
 #----------------------------------------------------------------------------------------------
 # CUERPO PRINCIPAL
 #----------------------------------------------------------------------------------------------
@@ -93,22 +117,23 @@ while opcion != 0:
     if opcion == 1:
         matriz = generarMatriz(int(input("Ingrese la medida de la matriz: ")))
         backupMatriz = matriz
+
     elif opcion == 2:
-        ...
+        matriz = ordenarMatriz(matriz)
     elif opcion == 3:
-        ...
+        f1 = int(input("Ingrese la primer fila: "))
+        f2 = int(input("Ingrese la segunda fila: "))
+        matriz = intercambiarFilas(matriz, f1, f2)
     elif opcion == 4:
-        ...
+        c1 = int(input("Ingrese la primer columna: "))
+        c2 = int(input("Ingrese la segunda columna: "))
+        matriz = intercambiarColumnas(matriz, c1, c2)
     elif opcion == 5:
-        ...
+        matriz = transponerMatriz(matriz)
     elif opcion == 6:
-        ...
-    elif opcion == 7:
-        ...
-    elif opcion == 8:
-        ...
-    elif opcion == 9:
-        ...
+        f = int(input("Ingrese la fila: "))
+        print(f"El promedio de la fila {f} es: {promedioFila(matriz, f)}")
+        
     
     imprimirMatriz(matriz)
     input("Presione ENTER para continuar.")
